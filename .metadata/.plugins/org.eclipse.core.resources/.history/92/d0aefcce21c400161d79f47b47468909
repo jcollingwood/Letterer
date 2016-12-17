@@ -1,0 +1,15 @@
+
+public class Letters {
+
+	String[][] letters;
+	
+	public Letters(){
+		
+	}
+	
+	public String[] getLetter(int index){
+		return letters[index];
+	}
+
+
+}

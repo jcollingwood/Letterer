@@ -1,0 +1,36 @@
+
+public class Letter {
+
+	private String[] letter;
+	private int width;
+	private int[] leadingMatrix;
+	private int[] trailingMatrix;
+
+	public Letter(String[] letter){
+		this.letter = letter;
+		this.width = getWidth();
+	}
+	
+	public String getLetterLine(int line){
+		return letter[line];
+	}
+	
+	public int[] getLeadingMatrix(){
+		return null;
+	}
+
+	public int[] getTrailingMatrix(){
+		return null;
+	}
+	
+	private int getWidth(){
+		int width = 0;
+		for(String line : letter){
+			if(line.length() > width)
+				width = line.length();
+		}
+		return width;
+	}
+	
+	
+}

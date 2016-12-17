@@ -1,0 +1,8 @@
+
+public class StringProcessor {
+
+	public static void convertString(String message){
+		
+	}
+	
+}

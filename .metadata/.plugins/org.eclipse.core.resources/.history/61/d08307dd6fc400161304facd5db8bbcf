@@ -1,0 +1,24 @@
+
+public class Letter {
+
+	private String[] letter;
+
+	public Letter(String rawString){
+		letter = rawString.split("\n");
+	}
+	
+	public String[] getLetter(){
+		return letter;
+	}
+	
+	public int getWidth(){
+		int width = 0;
+		for(String line : letter){
+			if(line.length() > width)
+				width = line.length();
+		}
+		return width;
+	}
+	
+	
+}

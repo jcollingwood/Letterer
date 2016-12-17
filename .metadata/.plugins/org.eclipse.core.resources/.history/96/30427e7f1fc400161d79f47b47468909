@@ -1,0 +1,8 @@
+
+public abstract class Letter {
+
+	private String letter;
+	private int width;
+	
+	
+}

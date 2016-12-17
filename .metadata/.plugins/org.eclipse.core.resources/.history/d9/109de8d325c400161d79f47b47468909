@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class LettererMain {
+
+	public static void main(String[] args) {
+
+		Letters letters = new Letters();
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter your message: ");
+		String message = scanner.next();
+		
+	}
+
+}

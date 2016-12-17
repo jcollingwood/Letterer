@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class LettererMain {
+
+	Letters letters;
+	
+	public static void main(String[] args) {
+
+		initialSetup();
+
+		while(true){
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Enter your message: ");
+			String message = scanner.next();
+		}
+	}
+
+	private static void initialSetup(){
+		Letters letters = new Letters();
+	}
+
+}

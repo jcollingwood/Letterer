@@ -1,0 +1,43 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Letters {
+
+	private final static String lettersFile = "letters.txt";
+
+	private static Letter[] letters;
+
+	public Letters(){
+		letters = new Letter[26];
+		try{
+			FileInputStream fstream = new FileInputStream(lettersFile);
+			BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+
+			String strLine;
+			String letterString = "";
+			int letterLine = 0;
+			
+			//Read File Line By Line
+			while ((strLine = br.readLine()) != null)   {
+				letterString = letterString+strLine;
+				letterLine++;
+				if(letterLine%7 == 0){
+					letters[letterLine%7] = new Letter(letterString);
+				}
+			}
+
+			//Close the input stream
+			br.close();
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+
+	public static Letter getLetter(int index){
+		return letters[index];
+	}
+
+
+}
