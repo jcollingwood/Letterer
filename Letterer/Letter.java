@@ -53,8 +53,17 @@ public class Letter {
 	private void calculateTrailingMatrix(){
 		trailingMatrix = new int[7];
 		int lineNum = 0;
+		int maxLine = 0;
 		for(String line : letter){
-			trailingMatrix[lineNum] = line.length() - width;
+			trailingMatrix[lineNum] = width - line.length();
+			if(trailingMatrix[lineNum] > maxLine)
+				maxLine = trailingMatrix[lineNum];
+			lineNum++;
+		}
+		lineNum = 0;
+		while(lineNum < 7){
+			trailingMatrix[lineNum] = maxLine - trailingMatrix[lineNum];
+			lineNum++;
 		}
 	}
 

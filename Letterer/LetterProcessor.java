@@ -31,7 +31,6 @@ public class LetterProcessor {
 		case 'z' : return Letters.getLetter(25);
 		default : return null;
 		}
-		
 	}
 	
 }
